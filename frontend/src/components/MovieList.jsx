@@ -21,6 +21,7 @@ const MovieList = ({ moviesData }) => {
     const handlePageChange = (_, value) => {
         setCurrentPage(value);
     };
+    if (!Array.isArray(moviesData)) return null;
 
     return (
         <Container maxWidth="xl" sx={{ py: 4 }}>
@@ -61,7 +62,7 @@ const MovieList = ({ moviesData }) => {
                             {/* Poster */}
                             <CardMedia
                                 component="img"
-                                image={movie.poster}
+                                image={movie.poster || "/logo.png"}
                                 alt={movie.title}
                                 sx={{
                                     height: 380,
