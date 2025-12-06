@@ -21,7 +21,7 @@ const MovieList = ({ moviesData }) => {
     const handlePageChange = (_, value) => {
         setCurrentPage(value);
     };
-    if (!Array.isArray(moviesData)) return null;
+    if (!Array.isArray(moviesData)) return <div>Loading...</div>;
 
     return (
         <Container maxWidth="xl" sx={{ py: 4 }}>
