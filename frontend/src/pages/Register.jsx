@@ -29,6 +29,8 @@ const Register = () => {
             setEmail("");
             setPassword("");
             Navigate("/");
+        } else {
+            alert(json.error || "Registration failed");
         }
     };
 
